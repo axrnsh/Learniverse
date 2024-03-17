@@ -19,6 +19,12 @@
             android:name=".sentence_puzzle"
             android:exported="false" />
         <activity
+            android:name=".ListStoryLayout"
+            android:exported="false" />
+        <activity
+            android:name=".StoryTaleActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
