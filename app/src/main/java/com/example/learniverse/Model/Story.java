@@ -1,9 +1,14 @@
 package com.example.learniverse.Model;
 
-public class Story {
+import io.realm.RealmObject;
+
+public class Story extends RealmObject {
     private String namaStory;
     private String descStory;
     private int gambarStory;
+
+    public Story() {
+    }
 
     public Story(String namaStory, String descStory, int gambarStory) {
         this.namaStory = namaStory;
