@@ -4,14 +4,14 @@ import io.realm.RealmObject;
 
 public class Puzzle extends RealmObject {
     private int gambarPuzzle;
-    private String opsiPuzzle;
-    private String benarPuzzle;
-    private String opsiTerpilihPuzzle;
+    private String[] opsiPuzzle;
+    private String[] benarPuzzle;
+    private String[] opsiTerpilihPuzzle;
 
     public Puzzle() {
     }
 
-    public Puzzle(int gambarPuzzle, String opsiPuzzle, String benarPuzzle, String opsiTerpilihPuzzle) {
+    public Puzzle(int gambarPuzzle, String[] opsiPuzzle, String[] benarPuzzle, String[] opsiTerpilihPuzzle) {
         this.gambarPuzzle = gambarPuzzle;
         this.opsiPuzzle = opsiPuzzle;
         this.benarPuzzle = benarPuzzle;
@@ -26,27 +26,27 @@ public class Puzzle extends RealmObject {
         this.gambarPuzzle = gambarPuzzle;
     }
 
-    public String getOpsiPuzzle() {
+    public String[] getOpsiPuzzle() {
         return opsiPuzzle;
     }
 
-    public void setOpsiPuzzle(String opsiPuzzle) {
+    public void setOpsiPuzzle(String[] opsiPuzzle) {
         this.opsiPuzzle = opsiPuzzle;
     }
 
-    public String getBenarPuzzle() {
+    public String[] getBenarPuzzle() {
         return benarPuzzle;
     }
 
-    public void setBenarPuzzle(String benarPuzzle) {
+    public void setBenarPuzzle(String[] benarPuzzle) {
         this.benarPuzzle = benarPuzzle;
     }
 
-    public String getOpsiTerpilihPuzzle() {
+    public String[] getOpsiTerpilihPuzzle() {
         return opsiTerpilihPuzzle;
     }
 
-    public void setOpsiTerpilihPuzzle(String opsiTerpilihPuzzle) {
+    public void setOpsiTerpilihPuzzle(String[] opsiTerpilihPuzzle) {
         this.opsiTerpilihPuzzle = opsiTerpilihPuzzle;
     }
 }
