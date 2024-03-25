@@ -1,8 +1,13 @@
 package com.example.learniverse.Model;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 public class SoalQuiz extends RealmObject {
+    @PrimaryKey
+    private long idSoalQuiz;
+    @Required
     private int poinSoal;
     private int nilaiQuiz;
 
@@ -12,6 +17,10 @@ public class SoalQuiz extends RealmObject {
     public SoalQuiz(int poinSoal, int nilaiQuiz) {
         this.poinSoal = poinSoal;
         this.nilaiQuiz = nilaiQuiz;
+    }
+
+    public long getIdSoalQuiz() {
+        return idSoalQuiz;
     }
 
     public int getPoinSoal() {
