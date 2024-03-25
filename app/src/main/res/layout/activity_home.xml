@@ -18,16 +18,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/LogoHome"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="8pt"
-                android:textSize="16pt"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:text="Learniverse" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/LogoHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8pt"
+                    android:text="Learniverse"
+                    android:textColor="@color/black"
+                    android:textSize="12pt"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -45,10 +53,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5pt"
-                    android:paddingLeft="10pt"
                     android:text="Learning Adventure"
                     android:textColor="@color/black"
-                    android:textSize="10pt"
+                    android:textSize="8pt"
+                    android:textAlignment="center"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -57,7 +65,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="80pt"
+                        android:layout_width="75pt"
                         android:layout_height="100pt"
                         android:layout_marginLeft="10pt"
                         android:layout_marginRight="5pt"
@@ -65,8 +73,8 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="75pt"
+                            android:layout_height="100pt"
                             android:background="@drawable/rounded_border"
                             android:orientation="vertical">
 
@@ -75,15 +83,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5pt"
-                                android:text="Level X"
+                                android:text=""
                                 android:textAlignment="center" />
+
+                            <ImageView
+                                android:id="@+id/StoryIllus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30pt"
+                                android:layout_gravity="center"
+                                android:src="@drawable/story_reading_illus" />
 
                             <TextView
                                 android:id="@+id/StoryReading"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="5pt"
                                 android:layout_marginHorizontal="5pt"
-                                android:layout_marginTop="35pt"
                                 android:text="Story Reading"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
@@ -103,19 +118,19 @@
                                 android:layout_width="50pt"
                                 android:layout_height="18pt"
                                 android:layout_gravity="center"
-                                android:backgroundTint="#F58A82"
+                                android:backgroundTint="#7F9B8C"
                                 android:text="START"
                                 android:layout_marginBottom="2pt"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="80pt"
+                        android:layout_width="75pt"
                         android:layout_height="100pt"
-                        android:layout_marginLeft="5pt"
+                        android:layout_marginLeft="3pt"
                         android:layout_marginRight="5pt"
                         android:layout_marginVertical="5pt"
                         android:orientation="horizontal">
@@ -131,15 +146,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5pt"
-                                android:text="Level X"
+                                android:text=""
                                 android:textAlignment="center" />
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30pt"
+                                android:layout_gravity="center"
+                                android:src="@drawable/vocab_card_illus" />
 
                             <TextView
                                 android:id="@+id/VocabCards"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="5pt"
-                                android:layout_marginTop="35pt"
+                                android:layout_marginTop="5pt"
                                 android:text="Vocab Cards"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
@@ -160,9 +182,9 @@
                                 android:layout_height="18pt"
                                 android:layout_marginBottom="2pt"
                                 android:layout_gravity="center"
-                                android:backgroundTint="#F58A82"
+                                android:backgroundTint="#7F9B8C"
                                 android:text="START"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
@@ -178,10 +200,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5pt"
-                android:paddingLeft="10pt"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="10pt"
+                android:textSize="8pt"
+                android:textAlignment="center"
                 android:text="Quiz Quests" />
 
             <LinearLayout
@@ -190,7 +212,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="80pt"
+                    android:layout_width="75pt"
                     android:layout_height="100pt"
                     android:layout_marginLeft="10pt"
                     android:layout_marginRight="5pt"
@@ -209,17 +231,24 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5pt"
                             android:textAlignment="center"
-                            android:text="Level X" />
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30pt"
+                            android:layout_gravity="center"
+                            android:src="@drawable/sentence_puzzle_illus" />
 
                         <TextView
                             android:id="@+id/AlphabetPuzzle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="35pt"
+                            android:layout_marginTop="5pt"
                             android:layout_marginHorizontal="5pt"
                             android:textAlignment="center"
                             android:textStyle="bold"
-                            android:text="Alphabet Puzzle" />
+                            android:text="Sentence Puzzle" />
 
                         <TextView
                             android:id="@+id/DesAlphabet"
@@ -238,17 +267,17 @@
                             android:layout_marginBottom="2pt"
                             android:text="START"
                             android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:backgroundTint="#F58A82"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#7F9B8C"
                             android:layout_gravity="center" />
                     </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="80pt"
+                    android:layout_width="75pt"
                     android:layout_height="100pt"
-                    android:layout_marginLeft="5pt"
+                    android:layout_marginLeft="3pt"
                     android:layout_marginRight="5pt"
                     android:layout_marginVertical="5pt"
                     android:orientation="horizontal">
@@ -265,13 +294,20 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5pt"
                             android:textAlignment="center"
-                            android:text="Level X" />
+                            android:text="Level 00" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30pt"
+                            android:layout_gravity="center"
+                            android:src="@drawable/evaluation_test_illus" />
 
                         <TextView
                             android:id="@+id/EvaluationTest"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="35pt"
+                            android:layout_marginTop="5pt"
                             android:layout_marginHorizontal="5pt"
                             android:textAlignment="center"
                             android:textStyle="bold"
@@ -294,8 +330,8 @@
                             android:layout_marginBottom="2pt"
                             android:text="START"
                             android:textStyle="bold"
-                            android:textColor="@color/black"
-                            android:backgroundTint="#F58A82"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#7F9B8C"
                             android:layout_gravity="center" />
                     </LinearLayout>
 
