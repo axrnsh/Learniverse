@@ -1,8 +1,13 @@
 package com.example.learniverse.Model;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 public class Story extends RealmObject {
+    @PrimaryKey
+    private long idStory;
+    @Required
     private String namaStory;
     private String descStory;
     private int gambarStory;
@@ -14,6 +19,10 @@ public class Story extends RealmObject {
         this.namaStory = namaStory;
         this.descStory = descStory;
         this.gambarStory = gambarStory;
+    }
+
+    public long getIdStory() {
+        return idStory;
     }
 
     public String getNamaStory() {
