@@ -13,10 +13,10 @@
         android:theme="@style/Theme.Learniverse"
         tools:targetApi="31">
         <activity
-            android:name=".activity_home"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".sentence_puzzle"
+            android:name=".SentencePuzzleActivity"
             android:exported="false" />
         <activity
             android:name=".ListStoryLayout"

@@ -6,7 +6,7 @@ import com.example.learniverse.Model.Puzzle;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
-public class sentence_puzzle extends AppCompatActivity {
+public class SentencePuzzleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

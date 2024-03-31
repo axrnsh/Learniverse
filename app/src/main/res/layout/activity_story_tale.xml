@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StroyTaleActivity">
+    tools:context=".StoryTaleActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,13 +23,17 @@
             android:layout_height="wrap_content"
             android:text="STORY READING" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputSearchTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="text"
-            android:text="Search Title..." />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="Search Title..." />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
