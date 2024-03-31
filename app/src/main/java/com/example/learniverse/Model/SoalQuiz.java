@@ -9,18 +9,23 @@ public class SoalQuiz extends RealmObject {
     private long idSoalQuiz;
     @Required
     private int poinSoal;
-    private int nilaiQuiz;
+    private Puzzle puzzle;
 
     public SoalQuiz() {
     }
 
-    public SoalQuiz(int poinSoal, int nilaiQuiz) {
+    public SoalQuiz(long idSoalQuiz, int poinSoal, Puzzle puzzle) {
+        this.idSoalQuiz = idSoalQuiz;
         this.poinSoal = poinSoal;
-        this.nilaiQuiz = nilaiQuiz;
+        this.puzzle = puzzle;
     }
 
     public long getIdSoalQuiz() {
         return idSoalQuiz;
+    }
+
+    public void setIdSoalQuiz(long idSoalQuiz) {
+        this.idSoalQuiz = idSoalQuiz;
     }
 
     public int getPoinSoal() {
@@ -31,11 +36,11 @@ public class SoalQuiz extends RealmObject {
         this.poinSoal = poinSoal;
     }
 
-    public int getNilaiQuiz() {
-        return nilaiQuiz;
+    public Puzzle getPuzzle() {
+        return puzzle;
     }
 
-    public void setNilaiQuiz(int nilaiQuiz) {
-        this.nilaiQuiz = nilaiQuiz;
+    public void setPuzzle(Puzzle puzzle) {
+        this.puzzle = puzzle;
     }
 }

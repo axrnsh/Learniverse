@@ -8,27 +8,25 @@ public class Quiz extends RealmObject {
     @PrimaryKey
     private long idQuiz;
     @Required
-    private String soalQuiz;
     private int nilaiQuiz;
+
+    private SoalQuiz soalQuiz;
 
     public Quiz() {
     }
 
-    public Quiz(String soalQuiz, int nilaiQuiz) {
-        this.soalQuiz = soalQuiz;
+    public Quiz(long idQuiz, int nilaiQuiz, SoalQuiz soalQuiz) {
+        this.idQuiz = idQuiz;
         this.nilaiQuiz = nilaiQuiz;
+        this.soalQuiz = soalQuiz;
     }
 
     public long getIdQuiz() {
         return idQuiz;
     }
 
-    public String getSoalQuiz() {
-        return soalQuiz;
-    }
-
-    public void setSoalQuiz(String soalQuiz) {
-        this.soalQuiz = soalQuiz;
+    public void setIdQuiz(long idQuiz) {
+        this.idQuiz = idQuiz;
     }
 
     public int getNilaiQuiz() {
@@ -37,5 +35,13 @@ public class Quiz extends RealmObject {
 
     public void setNilaiQuiz(int nilaiQuiz) {
         this.nilaiQuiz = nilaiQuiz;
+    }
+
+    public SoalQuiz getSoalQuiz() {
+        return soalQuiz;
+    }
+
+    public void setSoalQuiz(SoalQuiz soalQuiz) {
+        this.soalQuiz = soalQuiz;
     }
 }
