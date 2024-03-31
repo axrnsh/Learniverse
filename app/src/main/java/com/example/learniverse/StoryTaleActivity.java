@@ -58,7 +58,7 @@ public class StoryTaleActivity extends AppCompatActivity {
 
         clearAllStory();
         //init data
-        simpanDataStory("Story Title", "Story desc...", R.drawable.Gambar);
+        simpanDataStory("Story Title", "Story desc...", R.drawable.Gambar1);
     }
 
     public void simpanDataStory(String namaStory, String descStory, int gambarStory){

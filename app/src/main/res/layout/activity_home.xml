@@ -73,6 +73,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/boxSR"
                             android:layout_width="75pt"
                             android:layout_height="100pt"
                             android:background="@drawable/rounded_border"
@@ -136,6 +137,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/boxVC"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/rounded_border"
@@ -220,6 +222,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/boxSP"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/rounded_border"
@@ -283,6 +286,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/boxET"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/rounded_border"
