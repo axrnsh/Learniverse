@@ -3,6 +3,8 @@ package com.example.learniverse.Model;
 import java.util.ArrayList;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 public class HistoryQuiz extends RealmObject {
     @PrimaryKey

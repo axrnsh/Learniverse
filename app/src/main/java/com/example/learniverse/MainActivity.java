@@ -17,10 +17,19 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    LinearLayout layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        LinearLayout layout = (LinearLayout) findViewById(R.id.layout);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UserFormActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
