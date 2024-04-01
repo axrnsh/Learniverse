@@ -1,61 +1,50 @@
 package com.example.learniverse.Model;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import io.realm.annotations.Required;
 
 public class Puzzle extends RealmObject {
     @PrimaryKey
     private long idPuzzle;
-    @Required
+
     private int gambarPuzzle;
-    private String[] opsiPuzzle;
-    private String[] benarPuzzle;
-    private String[] opsiTerpilihPuzzle;
+    private RealmList<String> opsiPuzzle;
+    private RealmList<String> benarPuzzle;
+    private RealmList<String> opsiTerpilihPuzzle;
 
     public Puzzle() {
     }
 
-    public Puzzle(int gambarPuzzle, String[] opsiPuzzle, String[] benarPuzzle, String[] opsiTerpilihPuzzle) {
+    public Puzzle(long idPuzzle, RealmList<String> opsiPuzzle, RealmList<String> benarPuzzle, RealmList<String> opsiTerpilihPuzzle) {
+        this.idPuzzle = idPuzzle;
         this.gambarPuzzle = gambarPuzzle;
         this.opsiPuzzle = opsiPuzzle;
         this.benarPuzzle = benarPuzzle;
         this.opsiTerpilihPuzzle = opsiTerpilihPuzzle;
     }
 
-    public long getIdPuzzle() {
-        return idPuzzle;
-    }
-
-    public int getGambarPuzzle() {
-        return gambarPuzzle;
-    }
-
-    public void setGambarPuzzle(int gambarPuzzle) {
-        this.gambarPuzzle = gambarPuzzle;
-    }
-
-    public String[] getOpsiPuzzle() {
+    public RealmList<String> getOpsiPuzzle() {
         return opsiPuzzle;
     }
 
-    public void setOpsiPuzzle(String[] opsiPuzzle) {
+    public void setOpsiPuzzle(RealmList<String> opsiPuzzle) {
         this.opsiPuzzle = opsiPuzzle;
     }
 
-    public String[] getBenarPuzzle() {
+    public RealmList<String> getBenarPuzzle() {
         return benarPuzzle;
     }
 
-    public void setBenarPuzzle(String[] benarPuzzle) {
+    public void setBenarPuzzle(RealmList<String> benarPuzzle) {
         this.benarPuzzle = benarPuzzle;
     }
 
-    public String[] getOpsiTerpilihPuzzle() {
+    public RealmList<String> getOpsiTerpilihPuzzle() {
         return opsiTerpilihPuzzle;
     }
 
-    public void setOpsiTerpilihPuzzle(String[] opsiTerpilihPuzzle) {
+    public void setOpsiTerpilihPuzzle(RealmList<String> opsiTerpilihPuzzle) {
         this.opsiTerpilihPuzzle = opsiTerpilihPuzzle;
     }
 }

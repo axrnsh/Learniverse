@@ -7,7 +7,7 @@ import io.realm.annotations.Required;
 public class Story extends RealmObject {
     @PrimaryKey
     private long idStory;
-    @Required
+
     private String namaKategori;
     private String namaStory;
     private String descStory;

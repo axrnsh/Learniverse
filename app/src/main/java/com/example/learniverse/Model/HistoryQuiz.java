@@ -2,20 +2,19 @@ package com.example.learniverse.Model;
 
 import java.util.ArrayList;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import io.realm.annotations.Required;
 
 public class HistoryQuiz extends RealmObject {
     @PrimaryKey
     private long idHistoryQuiz;
-    @Required
-    private ArrayList<Quiz> selesaiQuiz;
+    private RealmList<Quiz> selesaiQuiz;
 
     public HistoryQuiz() {
     }
 
-    public HistoryQuiz(long idHistoryQuiz, ArrayList<Quiz> selesaiQuiz) {
+    public HistoryQuiz(long idHistoryQuiz, RealmList<Quiz> selesaiQuiz) {
         this.idHistoryQuiz = idHistoryQuiz;
         this.selesaiQuiz = selesaiQuiz;
     }
@@ -28,11 +27,11 @@ public class HistoryQuiz extends RealmObject {
         this.idHistoryQuiz = idHistoryQuiz;
     }
 
-    public ArrayList<Quiz> getSelesaiQuiz() {
+    public RealmList<Quiz> getSelesaiQuiz() {
         return selesaiQuiz;
     }
 
-    public void setSelesaiQuiz(ArrayList<Quiz> selesaiQuiz) {
+    public void setSelesaiQuiz(RealmList<Quiz> selesaiQuiz) {
         this.selesaiQuiz = selesaiQuiz;
     }
 }

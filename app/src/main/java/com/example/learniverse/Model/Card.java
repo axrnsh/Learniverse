@@ -7,7 +7,7 @@ import io.realm.annotations.Required;
 public class Card extends RealmObject {
     @PrimaryKey
     private long idCard;
-    @Required
+
     private String namaCard;
     private int gambarCard;
     private String suaraCard;

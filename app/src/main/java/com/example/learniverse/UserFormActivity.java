@@ -35,7 +35,6 @@ public class UserFormActivity extends AppCompatActivity {
             public void onClick(View v) {
                 username = editUsername.getText().toString();
                 password = editPassword.getText().toString();
-                Log.d("TAG", "Welcome" + username);
                 tambahDataUser(username, password);
                 Intent intent = new Intent(UserFormActivity.this, HomeActivity.class);
                 startActivity(intent);

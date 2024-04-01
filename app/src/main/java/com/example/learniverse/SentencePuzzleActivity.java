@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.example.learniverse.Model.Puzzle;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import io.realm.RealmList;
 
 public class SentencePuzzleActivity extends AppCompatActivity {
 
@@ -22,8 +23,16 @@ public class SentencePuzzleActivity extends AppCompatActivity {
 
         clearAllPuzzle();
 
-        simpanDataPuzzle(new Puzzle(R.drawable.sleeping_cat, new String[]{"cat", "sleeping", "dog", "The", "is"},
-                new String[]{"The", "cat", "is", "sleeping", ""}, new String[]{"", "", "", "", "", ""}));
+        simpanDataPuzzle(new Puzzle(R.drawable.sleeping_cat, createRealmList("cat", "sleeping", "dog", "The", "is"),
+                createRealmList("The", "cat", "is", "sleeping", ""), createRealmList("", "", "", "", "", "")));
+    }
+
+    private RealmList<String> createRealmList(String... elements) {
+        RealmList<String> realmList = new RealmList<>();
+        for (String element : elements) {
+            realmList.add(element);
+        }
+        return realmList;
     }
 
     private void simpanDataPuzzle(Puzzle puzzle) {

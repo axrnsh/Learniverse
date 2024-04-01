@@ -7,7 +7,7 @@ import io.realm.annotations.Required;
 public class Quiz extends RealmObject {
     @PrimaryKey
     private long idQuiz;
-    @Required
+
     private int nilaiQuiz;
 
     private SoalQuiz soalQuiz;
