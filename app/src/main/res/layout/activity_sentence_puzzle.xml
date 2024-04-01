@@ -12,177 +12,211 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="22dp">
-        <TextView
-            android:id="@+id/text_instruction"
-            android:textColor="@color/black"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Sentence Puzzle"
-            />
-        <ImageView
-            android:id="@+id/image_instruction"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginBottom="80dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/sleeping_cat"
-            android:scaleType="fitXY"
-            />
+
         <LinearLayout
-            android:id="@+id/line1"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"
-            android:layout_marginBottom="70dp"
-            android:layout_marginHorizontal="45dp"
-            android:orientation="vertical">
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/line2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"
-            android:layout_marginBottom="30dp"
-            android:layout_marginHorizontal="45dp"
-            android:orientation="vertical">
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/all_option1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="20dp"
-            android:layout_marginHorizontal="30dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:id="@+id/option1"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border"
-                android:paddingVertical="15dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/text1"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="sleeping"
-                    />
-            </LinearLayout>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:paddingRight="70dp"
                 android:layout_weight="1"
-                />
-            <LinearLayout
-                android:id="@+id/option2"
-                android:layout_width="95dp"
+                android:src="@drawable/back_button" />
+
+            <TextView
+                android:id="@+id/txtVocabCards"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border"
-                android:paddingVertical="15dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/text2"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="The"
-                    />
-            </LinearLayout>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-            <LinearLayout
-                android:id="@+id/option3"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border"
-                android:paddingVertical="15dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/text3"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="dog"
-                    />
-            </LinearLayout>
+                android:layout_gravity="center"
+                android:text="Sentence Puzzle"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/all_option2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="30dp"
-            android:layout_marginHorizontal="83dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/gambarCard"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/sleeping_cat" />
+
             <LinearLayout
-                android:id="@+id/option4"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border"
-                android:paddingVertical="15dp"
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="70dp"
+                android:background="@color/black"
                 android:orientation="vertical">
-                <TextView
-                    android:id="@+id/text4"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="cat"
-                    />
+
             </LinearLayout>
 
-            <View
-                android:layout_width="7dp"
-                android:layout_height="3dp"
-                android:layout_weight="1" />
             <LinearLayout
-                android:id="@+id/option5"
-                android:layout_width="95dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border"
-                android:paddingVertical="15dp"
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/black"
                 android:orientation="vertical">
-                <TextView
-                    android:id="@+id/text5"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="is"
-                    />
+
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/all_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/option1"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="sleeping"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/option2"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/option3"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dog"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/all_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="83dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/option4"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cat"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="3dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/option5"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="is"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_border_button"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="CHECK"
+                android:textColor="@color/dark_grey"
+                android:textSize="22sp"
+                android:textStyle="bold" />
         </LinearLayout>
-        <Button
-            android:id="@+id/submit_button"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border_button"
-            android:text="CHECK"
-            android:textSize="22sp"
-            android:textColor="@color/dark_grey"
-            android:enabled="false"
-            android:clickable="false"
-            android:padding="5dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

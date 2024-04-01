@@ -29,8 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="20pt"
                     android:layout_weight="1"
-                    android:layout_marginRight="30pt"
-                    android:layout_marginLeft="0pt"
+                    android:layout_marginRight="50pt"
                     android:src="@drawable/logo_learniverse_hori" />
 
                 <ImageView
@@ -82,7 +81,7 @@
                             android:layout_width="75pt"
                             android:layout_height="100pt"
                             android:background="@drawable/rounded_border"
-                            android:orientation="vertical">
+                            android:orientation="vertical" >
 
                             <TextView
                                 android:id="@+id/LvStory"
