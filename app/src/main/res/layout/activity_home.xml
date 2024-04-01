@@ -20,20 +20,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="8pt"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/LogoHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8pt"
-                    android:text="Learniverse"
-                    android:textColor="@color/black"
-                    android:textSize="12pt"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="170pt"
+                    android:layout_height="20pt"
+                    android:layout_weight="1"
+                    
+                    android:src="@drawable/logo_learniverse_hori" />
 
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20pt"
+                    android:layout_weight="1"
+                    android:src="@drawable/profile_pic" />
             </LinearLayout>
 
         </LinearLayout>
