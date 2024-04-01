@@ -26,10 +26,11 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="170pt"
+                    android:layout_width="wrap_content"
                     android:layout_height="20pt"
                     android:layout_weight="1"
-                    
+                    android:layout_marginRight="30pt"
+                    android:layout_marginLeft="0pt"
                     android:src="@drawable/logo_learniverse_hori" />
 
                 <ImageView
