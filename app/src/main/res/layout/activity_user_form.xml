@@ -11,14 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="22dp" >
+        android:layout_margin="22dp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Learniverse" />
+            android:text="Learniverse"
+            android:layout_marginBottom="40dp" />
 
         <TextView
             android:id="@+id/txtUsername"
@@ -32,7 +34,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="leranie99" />
+            android:text="leranie99"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:id="@+id/txtPassword"
@@ -46,13 +49,15 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Password" />
+            android:text="Password"
+            android:layout_marginBottom="40dp"/>
 
         <Button
             android:id="@+id/buttonGo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="GO" />
+            android:backgroundTint="@color/green"
+            android:text="SIGN IN" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
