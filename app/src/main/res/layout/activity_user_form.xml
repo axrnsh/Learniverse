@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="leranie99"
+            android:text="learnie99"
             android:layout_marginBottom="20dp"/>
 
         <TextView

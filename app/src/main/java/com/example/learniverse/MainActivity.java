@@ -15,6 +15,9 @@ import com.example.learniverse.Model.Story;
 
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout layout;
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initRealm();
 
         LinearLayout layout = (LinearLayout) findViewById(R.id.layout);
         layout.setOnClickListener(new View.OnClickListener() {
@@ -31,5 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void initRealm() {
+        //config realm
+        Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder()
+                .deleteRealmIfMigrationNeeded()
+                .allowWritesOnUiThread(true)
+                .build();
+        Realm.setDefaultConfiguration(config);
     }
 }
