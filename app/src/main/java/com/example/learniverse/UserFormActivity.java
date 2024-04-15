@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.learniverse.Model.User;
-import com.google.android.gms.tflite.acceleration.Model;
 
 import io.realm.Realm;
 import io.realm.RealmObject;
