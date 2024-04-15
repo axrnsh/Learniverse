@@ -5,18 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class HomeActivity extends AppCompatActivity {
-    LinearLayout boxSR, boxVC, boxSP, boxET;
+    Button startStory, startVocab, startAlphabet, startEvaluation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         // transition
-        boxSR = (LinearLayout) findViewById(R.id.boxSR);
-        boxSR.setOnClickListener(new View.OnClickListener() {
+        startStory = (Button) findViewById(R.id.startStory);
+        startStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, StoryTaleActivity.class);
@@ -24,8 +25,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        boxVC = (LinearLayout) findViewById(R.id.boxVC);
-        boxVC.setOnClickListener(new View.OnClickListener() {
+        startVocab = (Button) findViewById(R.id.startVocab);
+        startVocab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, VocabCardsActivity.class);
@@ -33,8 +34,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        boxSP = (LinearLayout) findViewById(R.id.boxSP);
-        boxSP.setOnClickListener(new View.OnClickListener() {
+        startAlphabet = (Button) findViewById(R.id.startAlphabet);
+        startAlphabet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, SentencePuzzleActivity.class);
@@ -42,8 +43,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        boxET = (LinearLayout) findViewById(R.id.boxET);
-        boxET.setOnClickListener(new View.OnClickListener() {
+        startEvaluation = (Button) findViewById(R.id.startEvaluation);
+        startEvaluation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, EvaluationTestActivity.class);
