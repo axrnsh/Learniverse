@@ -2,9 +2,11 @@ package com.example.learniverse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 
 public class StoryTaleActivity extends AppCompatActivity {
+    ImageView backButton;
     ListView liststory;
     ArrayList<Story> storyArrayList;
     private static StoryAdapter adapter;
@@ -25,6 +28,16 @@ public class StoryTaleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_tale);
+
+        // transition
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StoryTaleActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         initRealm();
 
