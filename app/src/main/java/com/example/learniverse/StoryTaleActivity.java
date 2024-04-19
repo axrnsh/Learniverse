@@ -3,11 +3,16 @@ package com.example.learniverse;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
+import android.text.TextPaint;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.learniverse.Adapter.StoryAdapter;
@@ -21,6 +26,7 @@ import io.realm.RealmResults;
 
 public class StoryTaleActivity extends AppCompatActivity {
     ImageView backButton;
+    TextView txtStoryReading;
     ListView liststory;
     ArrayList<Story> storyArrayList;
     private static StoryAdapter adapter;
@@ -38,6 +44,19 @@ public class StoryTaleActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        txtStoryReading = findViewById(R.id.txtStoryReading);
+        txtStoryReading.setText("Story Reading");
+
+        TextPaint paint = txtStoryReading.getPaint();
+        float width = paint.measureText("Story Reading");
+
+        Shader txtShader = new LinearGradient(0, 0, 0, 20,
+                new int[]{
+                        Color.parseColor("#A8CFC5"),
+                        Color.parseColor("#586955"),
+                }, null, Shader.TileMode.CLAMP);
+        txtStoryReading.getPaint().setShader(txtShader);
 
         initRealm();
 

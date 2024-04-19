@@ -5,4 +5,6 @@
     <color name="grey">#D9D9D9</color>
     <color name="dark_grey">#7B7B7B</color>
     <color name="green">#7F9B8C</color>
+    <color name="logo_light_green">#A8CFC5</color>
+    <color name="logo_dark_green">#586955</color>
 </resources>

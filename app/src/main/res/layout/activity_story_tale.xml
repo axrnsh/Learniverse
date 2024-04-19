@@ -20,11 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="17dp">
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="5dp"
+                android:layout_width="197dp"
                 android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="70dp"
@@ -32,14 +32,16 @@
                 android:src="@drawable/back_button" />
 
             <TextView
-                android:id="@+id/txtVocabCards"
+                android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="90dp"
                 android:layout_gravity="center"
-                android:text="Story Reading"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="28dp"
-                android:textStyle="bold" />
+                android:textFontWeight="100000"
+                android:fontFamily="@font/inter"/>
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -48,9 +50,12 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="362dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
                 android:ems="5"
+                android:textSize="12dp"
+                android:fontFamily="@font/inter"
                 android:hint="Search Title..." />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,9 +74,10 @@
                 <TextView
                     android:id="@+id/txtFantasy"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/inter"
                     android:text="Fantasy" />
             </LinearLayout>
 
@@ -85,9 +91,10 @@
                 <TextView
                     android:id="@+id/txtMystery"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/inter"
                     android:text="Mystery" />
             </LinearLayout>
 
@@ -101,9 +108,10 @@
                 <TextView
                     android:id="@+id/txtPoetry"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/inter"
                     android:text="Poetry" />
             </LinearLayout>
 
@@ -117,10 +125,11 @@
                 <TextView
                     android:id="@+id/txtEducation"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Fantasy" />
+                    android:fontFamily="@font/inter"
+                    android:text="Education" />
             </LinearLayout>
         </LinearLayout>
 
