@@ -17,27 +17,35 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp">
+            android:layout_gravity="center">
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="70dp"
-                android:layout_weight="1"
                 android:src="@drawable/back_button" />
 
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
             <TextView
-                android:id="@+id/txtVocabCards"
-                android:layout_width="260dp"
+                android:id="@+id/txtSentencePuzzle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Sentence Puzzle"
                 android:textColor="@color/black"
                 android:textSize="24dp"
                 android:textStyle="bold" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <!-- kenapa 50? karena back buttonnya 50dp-->
         </LinearLayout>
 
         <LinearLayout
