@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VocabCardsActivity"
-    android:background="@drawable/vocab_card">
+    android:background="@drawable/ref_vocab_card">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="88dp"
                 android:layout_weight="1"
-                android:src="@drawable/back_button"/>
+                android:src="@drawable/icon_back_button"/>
 
             <TextView
                 android:id="@+id/txtStoryReading"

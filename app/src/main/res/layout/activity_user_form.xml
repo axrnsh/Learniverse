@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserFormActivity">
+    tools:context=".UserFormActivity"
+    android:background="@drawable/ref_login_page">
 
 
     <LinearLayout

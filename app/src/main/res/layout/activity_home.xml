@@ -96,7 +96,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30pt"
                                 android:layout_gravity="center"
-                                android:src="@drawable/story_reading_illus" />
+                                android:src="@drawable/illus_story_reading" />
 
                             <TextView
                                 android:id="@+id/StoryReading"
@@ -160,7 +160,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="30pt"
                                 android:layout_gravity="center"
-                                android:src="@drawable/vocab_card_illus" />
+                                android:src="@drawable/illus_vocab_card" />
 
                             <TextView
                                 android:id="@+id/VocabCards"
@@ -245,7 +245,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="30pt"
                             android:layout_gravity="center"
-                            android:src="@drawable/sentence_puzzle_illus" />
+                            android:src="@drawable/illus_sentence_puzzle" />
 
                         <TextView
                             android:id="@+id/AlphabetPuzzle"
@@ -309,7 +309,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="30pt"
                             android:layout_gravity="center"
-                            android:src="@drawable/evaluation_test_illus" />
+                            android:src="@drawable/illus_evaluation_test" />
 
                         <TextView
                             android:id="@+id/EvaluationTest"

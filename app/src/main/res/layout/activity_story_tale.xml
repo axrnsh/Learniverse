@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/story_reading"
+    android:background="@drawable/ref_story_reading"
     tools:context=".StoryTaleActivity">
 
     <LinearLayout
@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="70dp"
                 android:layout_weight="1"
-                android:src="@drawable/back_button"/>
+                android:src="@drawable/icon_back_button"/>
 
             <TextView
                 android:id="@+id/txtStoryReading"
