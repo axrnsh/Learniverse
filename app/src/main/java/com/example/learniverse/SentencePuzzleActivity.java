@@ -7,21 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
-import com.example.learniverse.Model.Puzzle;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
-import io.realm.RealmList;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class SentencePuzzleActivity extends AppCompatActivity {
-    ImageView backButton;
+    private LinearLayout line1;
+    private TextView[] optionTextViews;
+    private StringBuilder userSentence;
+    private Button submitButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sentence_puzzle);
 
-        // transition
-        backButton = (ImageView) findViewById(R.id.backButton);
+        // Transition
+        ImageView backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,38 +32,85 @@ public class SentencePuzzleActivity extends AppCompatActivity {
             }
         });
 
-        Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder()
-                .deleteRealmIfMigrationNeeded()
-                .allowWritesOnUiThread(true)
-                .build();
-        Realm.setDefaultConfiguration(config);
+        line1 = findViewById(R.id.line1);
+        optionTextViews = new TextView[]{
+                findViewById(R.id.text1),
+                findViewById(R.id.text2),
+                findViewById(R.id.text3),
+                findViewById(R.id.text4)
+        };
 
-        clearAllPuzzle();
+        userSentence = new StringBuilder();
+        submitButton = findViewById(R.id.submit_button);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkUserSentence();
+            }
+        });
 
-        simpanDataPuzzle(new Puzzle(R.drawable.sleeping_cat, createRealmList("cat", "sleeping", "dog", "The", "is"),
-                createRealmList("The", "cat", "is", "sleeping", ""), createRealmList("", "", "", "", "", "")));
-    }
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        layoutParams.setMargins(10, 0, 0, 0);
 
-    private RealmList<String> createRealmList(String... elements) {
-        RealmList<String> realmList = new RealmList<>();
-        for (String element : elements) {
-            realmList.add(element);
+        for (TextView optionTextView : optionTextViews) {
+            optionTextView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    TextView clickedTextView = (TextView) v;
+                    LinearLayout parentLayout = (LinearLayout) clickedTextView.getParent();
+                    if (parentLayout != null) {
+                        if (parentLayout.getId() == R.id.line1) {
+                            line1.removeView(clickedTextView);
+                            LinearLayout allOptionLayout = findViewById(R.id.all_option);
+                            allOptionLayout.addView(clickedTextView);
+                            String clickedText = clickedTextView.getText().toString();
+                            int startIndex = userSentence.lastIndexOf(clickedText);
+                            if (startIndex != -1) {
+                                userSentence.delete(startIndex, startIndex + clickedText.length());
+                            }
+                            checkOptionSelection();
+                        } else {
+                            parentLayout.removeView(clickedTextView);
+                            line1.addView(clickedTextView);
+                            userSentence.append(clickedTextView.getText()).append(" ");
+                            checkOptionSelection();
+                        }
+                    }
+                }
+            });
         }
-        return realmList;
+
+        findViewById(R.id.submit_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkUserSentence();
+            }
+        });
     }
 
-    private void simpanDataPuzzle(Puzzle puzzle) {
-        Realm realm = Realm.getDefaultInstance();
-        realm.executeTransaction(realmInstance -> realmInstance.copyToRealmOrUpdate(puzzle));
-        realm.close();
+    private void checkOptionSelection() {
+        boolean allOptionsSelected = true;
+        for (TextView optionTextView : optionTextViews) {
+            if (line1.indexOfChild(optionTextView) == -1) {
+                allOptionsSelected = false;
+                break;
+            }
+        }
+        submitButton.setEnabled(allOptionsSelected);
+        submitButton.setClickable(allOptionsSelected);
     }
 
-    private void clearAllPuzzle() {
-        Realm realm = Realm.getDefaultInstance();
-        realm.beginTransaction();
-        realm.delete(Puzzle.class);
-        realm.commitTransaction();
-        realm.close();
+    private void checkUserSentence() {
+        String userSentenceStr = userSentence.toString().trim();
+        String correctSentence = "The cat is sleeping";
+
+        if (userSentenceStr.equalsIgnoreCase(correctSentence)) {
+            Toast.makeText(SentencePuzzleActivity.this, "Correct sentence!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(SentencePuzzleActivity.this, "Incorrect sentence. Nice try!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
