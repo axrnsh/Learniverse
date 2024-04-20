@@ -1,32 +1,31 @@
 package com.example.learniverse.Model;
 
 public class GuessingQuestions {
-    private long idGuessingQuestions;
-    private String questions, answer1, answer2, answer3, correct;
+    private String questionCounter, question, answer1, answer2, answer3, correct;
 
-    public GuessingQuestions(long idGuessingQuestions, String questions, String answer1, String answer2, String answer3, String correct) {
-        this.idGuessingQuestions = idGuessingQuestions;
-        this.questions = questions;
+    public GuessingQuestions(String questionCounter, String question, String answer1, String answer2, String answer3, String correct) {
+        this.questionCounter = questionCounter;
+        this.question = question;
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
         this.correct = correct;
     }
 
-    public long getIdGuessingQuestions() {
-        return idGuessingQuestions;
+    public String getQuestionCounter() {
+        return questionCounter;
     }
 
-    public void setIdGuessingQuestions(long idGuessingQuestions) {
-        this.idGuessingQuestions = idGuessingQuestions;
+    public void setQuestionCounter(String questionCounter) {
+        this.questionCounter = questionCounter;
     }
 
-    public String getQuestions() {
-        return questions;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setQuestions(String questions) {
-        this.questions = questions;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public String getAnswer1() {
@@ -60,6 +59,4 @@ public class GuessingQuestions {
     public void setCorrect(String correct) {
         this.correct = correct;
     }
-
-
 }

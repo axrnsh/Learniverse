@@ -1,7 +1,7 @@
 {
   "guessingquestions": [
     {
-      "questionCounter": "1",
+      "questionCounter": "Question 1",
       "question": "What shape has four equal sides?",
       "answer1": "Square",
       "answer2": "Circle",
@@ -9,7 +9,7 @@
       "correct": "Square"
     },
     {
-      "questionCounter": "2",
+      "questionCounter": "Question 2",
       "question": "What do you use to brush your teeth?",
       "answer1": "Comb",
       "answer2": "Toothbrush",
@@ -17,7 +17,7 @@
       "correct": "Toothbrush"
     },
     {
-      "questionCounter": "3",
+      "questionCounter": "Question 3",
       "question": "What do you wear on your feet?",
       "answer1": "Hat",
       "answer2": "Gloves",
@@ -25,7 +25,7 @@
       "correct": "Socks"
     },
     {
-      "questionCounter": "4",
+      "questionCounter": "Question 4",
       "question": "What color is the sky?",
       "answer1": "Red",
       "answer2": "Blue",
@@ -33,7 +33,7 @@
       "correct": "Blue"
     },
     {
-      "questionCounter": "5",
+      "questionCounter": "Question 5",
       "question": "What do you use to write on paper?",
       "answer1": "Fork",
       "answer2": "Spoon",

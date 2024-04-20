@@ -11,7 +11,7 @@ import android.widget.Button;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class HomeActivity extends AppCompatActivity {
-    Button startStory, startVocab, startAlphabet, startEvaluation;
+    Button startStory, startVocab, startAlphabet, startGuessingGame;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +45,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        startEvaluation = (Button) findViewById(R.id.startEvaluation);
-        startEvaluation.setOnClickListener(new View.OnClickListener() {
+        startGuessingGame = (Button) findViewById(R.id.startGuessingGame);
+        startGuessingGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, GuessingGameActivity.class);

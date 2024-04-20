@@ -28,7 +28,7 @@
                 android:layout_width="197dp"
                 android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="78dp"
+                android:layout_marginRight="62dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_back_button"/>
 
@@ -36,7 +36,7 @@
                 android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="100dp"
+                android:layout_marginRight="78dp"
                 android:layout_gravity="center"
                 android:text="Guessing Game"
                 android:textColor="@color/black"

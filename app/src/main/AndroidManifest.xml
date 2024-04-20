@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Learniverse"
         tools:targetApi="31">
         <activity
-            android:name=".GuessingGameScoreActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
@@ -35,6 +32,12 @@
             android:exported="false" />
         <activity
             android:name=".StoryTaleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuessingGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuessingGameScoreActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
