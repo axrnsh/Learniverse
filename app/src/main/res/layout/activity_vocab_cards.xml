@@ -12,71 +12,73 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_margin="22dp">
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="22dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_marginBottom="17dp" >
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="50dp"
-                android:layout_height="25dp"
+                android:layout_width="197dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:src="@drawable/back_button" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_marginRight="88dp"
+                android:layout_weight="1"
+                android:src="@drawable/back_button"/>
 
             <TextView
-                android:id="@+id/txtVocabCards"
+                android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="106dp"
                 android:layout_gravity="center"
-                android:text="Vocab Cards"
+                android:text="Vocab Card"
                 android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="50dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:textSize="28dp"
+                android:textFontWeight="100000"
+                android:fontFamily="@font/inter"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:orientation="vertical" >
 
             <ImageView
                 android:id="@+id/gambarCard"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/sleeping_cat" />
+                android:layout_width="225dp"
+                android:layout_height="225dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/sleeping_cat"
+                android:layout_gravity="center"
+                />
 
             <TextView
                 android:id="@+id/namaCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
                 android:text="APPLE"
                 android:textAlignment="center"
-                android:textSize="28dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/logo_dark_green"
+                android:fontFamily="@font/inter"
+                android:textFontWeight="100000"/>
 
             <TextView
                 android:id="@+id/descCard"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
                 android:text="A fruit with red bright color"
                 android:textAlignment="center" />
 
@@ -84,15 +86,16 @@
                 android:id="@+id/sound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
                 android:src="@android:drawable/btn_star" />
 
             <TextView
                 android:id="@+id/txtSlide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="85dp"
                 android:text="Slide to next!"
                 android:textAlignment="center" />
         </LinearLayout>
