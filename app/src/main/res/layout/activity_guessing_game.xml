@@ -50,7 +50,77 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            
+            <TextView
+                android:id="@+id/questionCounter"
+                android:layout_width="95dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="105dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/rounded_elips_border"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:textColor="@color/logo_light_green"
+                android:fontFamily="@font/inter"/>
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="285dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="22dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textColor="@color/logo_dark_green"
+                android:fontFamily="@font/inter"/>
+            <TextView
+                android:id="@+id/answer1"
+                android:layout_width="285dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/rounded_dotted_border"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:textColor="@color/logo_dark_green"
+                android:fontFamily="@font/inter"/>
+            <TextView
+                android:id="@+id/answer2"
+                android:layout_width="285dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/rounded_dotted_border"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:textColor="@color/logo_dark_green"
+                android:fontFamily="@font/inter"/>
+            <TextView
+                android:id="@+id/answer3"
+                android:layout_width="285dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/rounded_dotted_border"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:textColor="@color/logo_dark_green"
+                android:fontFamily="@font/inter"/>
+            <ImageView
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/button_next_gnw"/>
+
         </LinearLayout>
 
     </LinearLayout>
