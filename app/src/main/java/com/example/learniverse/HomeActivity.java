@@ -2,11 +2,13 @@ package com.example.learniverse;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class HomeActivity extends AppCompatActivity {
     Button startStory, startVocab, startAlphabet, startEvaluation;
@@ -47,9 +49,30 @@ public class HomeActivity extends AppCompatActivity {
         startEvaluation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, EvaluationTestActivity.class);
+                Intent intent = new Intent(HomeActivity.this, GuessingGameActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(HomeActivity.this);
+        materialAlertDialogBuilder.setTitle(R.string.app_name);
+        materialAlertDialogBuilder.setMessage("Are you sure you want to exit Learniverse?");
+        materialAlertDialogBuilder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        materialAlertDialogBuilder.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        materialAlertDialogBuilder.show();
     }
 }
