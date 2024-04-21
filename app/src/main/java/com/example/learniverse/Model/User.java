@@ -5,11 +5,9 @@ import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 public class User extends RealmObject {
-
     private long idUser;
     private String username;
     private String password;
-
     private Story idStory;
     private Card idCard;
     private HistoryQuiz historyQuiz;
