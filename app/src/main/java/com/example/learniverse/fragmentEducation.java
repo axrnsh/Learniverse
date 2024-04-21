@@ -78,7 +78,7 @@ public class fragmentEducation extends Fragment {
             }
 
             // Load stories from Realm and pass them to the adapter
-            ArrayList<Story> stories = getAllStory();
+            ArrayList<Story> stories = getAllEducationStories();
             recyclerView.setAdapter(new VPStoryAdapter(stories));
         }
         return view;
@@ -98,8 +98,10 @@ public class fragmentEducation extends Fragment {
     }
 
     // Method to retrieve all stories from Realm
-    private ArrayList<Story> getAllStory() {
-        RealmResults<Story> stories = realm.where(Story.class).findAll();
+    private ArrayList<Story> getAllEducationStories() {
+        RealmResults<Story> stories = realm.where(Story.class)
+                .equalTo("category", "Education") // Assuming you have a 'category' field in your Story class
+                .findAll();
         return new ArrayList<>(stories);
     }
 
