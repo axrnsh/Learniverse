@@ -28,7 +28,7 @@
                 android:layout_width="198dp"
                 android:layout_height="28dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="88dp"
+                android:layout_marginRight="68dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_back_button"/>
 
@@ -36,28 +36,13 @@
                 android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="106dp"
+                android:layout_marginRight="88dp"
                 android:layout_gravity="center"
                 android:text="Story Reading"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
         </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputSearchTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="362dp"
-                android:layout_height="34dp"
-                android:layout_gravity="center"
-                android:ems="5"
-                android:textSize="12dp"
-                android:hint="Search Title..." />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutCategory"
@@ -84,7 +69,7 @@
         </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPage"
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -92,16 +77,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tabLayoutCategory" >
-
         </androidx.viewpager.widget.ViewPager>
-
-        <ListView
-            android:id="@+id/listStory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
