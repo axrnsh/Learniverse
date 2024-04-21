@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="90dp"
                 android:layout_gravity="center"
-                android:text="Harry Poter"
+                android:text="Harry Potter"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
@@ -60,7 +60,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:paddingTop="4dp"
-                android:text="From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny."
+                android:text="          From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny."
                 android:textSize="18dp">
 
             </TextView>
