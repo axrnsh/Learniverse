@@ -20,9 +20,9 @@ public class SentencePuzzleActivity extends AppCompatActivity {
     private int questionIndex = 0;
 
     private int[] imageResources = {
-            R.drawable.sleeping_cat,
-            R.drawable.piano_kid,
-            R.drawable.giraffe
+            R.drawable.sentence_sleeping_cat,
+            R.drawable.sentence_piano,
+            R.drawable.sentence_giraffe
     };
     private String[][] options = {
             {"sleeping", "The", "cat", "is"},

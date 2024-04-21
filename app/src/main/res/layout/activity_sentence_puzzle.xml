@@ -63,7 +63,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/sleeping_cat" />
+                android:src="@drawable/sentence_sleeping_cat" />
 
             <LinearLayout
                 android:id="@+id/line1"
