@@ -60,10 +60,10 @@ public class fragmentPoetry extends Fragment {
         clearAllStory();
 
         // Initialize data (optional)
-        simpanDataStory("Story Title", "Story desc...", R.drawable.gambar1);
+        simpanDataStoryPoetry("Story Title", "Story desc...", R.drawable.gambar1);
     }
 
-    @Override
+    @Overrideg
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_education_list, container, false);
@@ -105,7 +105,7 @@ public class fragmentPoetry extends Fragment {
     }
 
     // Method to save a new story to Realm
-    private void simpanDataStory(final String namaStory, final String descStory, final int gambarStory) {
+    private void simpanDataStoryPoetry(final String namaStory, final String descStory, final int gambarStory) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {

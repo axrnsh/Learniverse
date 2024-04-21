@@ -60,7 +60,7 @@ public class fragmentFantasy extends Fragment {
         clearAllStory();
 
         // Initialize data (optional)
-        simpanDataStory("Story Title", "Story desc...", R.drawable.gambar1);
+        simpanDataStoryFantasy("Story Title", "Story desc...", R.drawable.gambar1);
     }
 
     @Override
@@ -105,7 +105,7 @@ public class fragmentFantasy extends Fragment {
     }
 
     // Method to save a new story to Realm
-    private void simpanDataStory(final String namaStory, final String descStory, final int gambarStory) {
+    private void simpanDataStoryFantasy(final String namaStory, final String descStory, final int gambarStory) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
