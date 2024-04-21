@@ -6,7 +6,7 @@ import io.realm.annotations.Required;
 
 public class Story extends RealmObject {
     private long idStory;
-    private String namaKategori;
+    private String category;
     private String namaStory;
     private String descStory;
     private int gambarStory;
@@ -14,9 +14,9 @@ public class Story extends RealmObject {
     public Story() {
     }
 
-    public Story(long idStory, String namaKategori, String namaStory, String descStory, int gambarStory) {
+    public Story(long idStory, String category, String namaStory, String descStory, int gambarStory) {
         this.idStory = idStory;
-        this.namaKategori = namaKategori;
+        this.category = category;
         this.namaStory = namaStory;
         this.descStory = descStory;
         this.gambarStory = gambarStory;
@@ -30,12 +30,12 @@ public class Story extends RealmObject {
         this.idStory = idStory;
     }
 
-    public String getNamaKategori() {
-        return namaKategori;
+    public String getCategory() {
+        return category;
     }
 
-    public void setNamaKategori(String namaKategori) {
-        this.namaKategori = namaKategori;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getNamaStory() {
