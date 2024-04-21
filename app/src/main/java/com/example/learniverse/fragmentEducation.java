@@ -56,9 +56,6 @@ public class fragmentEducation extends Fragment {
         // Open the Realm instance
         realm = Realm.getDefaultInstance();
 
-        // Clear all existing stories (optional)
-        clearAllStory();
-
         // Initialize data (optional)
         simpanDataStoryEducation("Story Title", "Story desc...", R.drawable.gambar1);
     }

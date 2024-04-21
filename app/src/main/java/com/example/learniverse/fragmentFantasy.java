@@ -56,9 +56,6 @@ public class fragmentFantasy extends Fragment {
         // Open the Realm instance
         realm = Realm.getDefaultInstance();
 
-        // Clear all existing stories (optional)
-        clearAllStory();
-
         // Initialize data (optional)
         simpanDataStoryFantasy("Story Title", "Story desc...", R.drawable.gambar1);
     }

@@ -56,9 +56,6 @@ public class fragmentPoetry extends Fragment {
         // Open the Realm instance
         realm = Realm.getDefaultInstance();
 
-        // Clear all existing stories (optional)
-        clearAllStory();
-
         // Initialize data (optional)
         simpanDataStoryPoetry("Story Title", "Story desc...", R.drawable.gambar1);
     }
