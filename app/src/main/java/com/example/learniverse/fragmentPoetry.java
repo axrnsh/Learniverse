@@ -100,7 +100,7 @@ public class fragmentPoetry extends Fragment {
     // Method to retrieve all stories from Realm
     private ArrayList<Story> getAllPoetryStories() {
         RealmResults<Story> stories = realm.where(Story.class)
-                .equalTo("category", "Education") // Assuming you have a 'category' field in your Story class
+                .equalTo("category", "Poetry")
                 .findAll();
         return new ArrayList<>(stories);
     }
