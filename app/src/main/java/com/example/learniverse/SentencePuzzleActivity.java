@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,6 +17,23 @@ public class SentencePuzzleActivity extends AppCompatActivity {
     private TextView[] optionTextViews;
     private StringBuilder userSentence;
     private Button submitButton;
+    private int questionIndex = 0;
+
+    private int[] imageResources = {
+            R.drawable.sleeping_cat,
+            R.drawable.piano_kid,
+            R.drawable.giraffe
+    };
+    private String[][] options = {
+            {"sleeping", "The", "cat", "is"},
+            {"piano", "is", "playing", "He"},
+            {"is", "It", "giraffe", "a"}
+    };
+    private String[] correctSentences = {
+            "The cat is sleeping",
+            "He is playing piano",
+            "It is a giraffe"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +57,11 @@ public class SentencePuzzleActivity extends AppCompatActivity {
                 findViewById(R.id.text3),
                 findViewById(R.id.text4)
         };
-
         userSentence = new StringBuilder();
         submitButton = findViewById(R.id.submit_button);
+
+        setQuestion(questionIndex);
+
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,46 +69,58 @@ public class SentencePuzzleActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-        layoutParams.setMargins(10, 0, 0, 0);
-
-        for (TextView optionTextView : optionTextViews) {
+        for (final TextView optionTextView : optionTextViews) {
             optionTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    TextView clickedTextView = (TextView) v;
-                    LinearLayout parentLayout = (LinearLayout) clickedTextView.getParent();
-                    if (parentLayout != null) {
-                        if (parentLayout.getId() == R.id.line1) {
-                            line1.removeView(clickedTextView);
-                            LinearLayout allOptionLayout = findViewById(R.id.all_option);
-                            allOptionLayout.addView(clickedTextView);
-                            String clickedText = clickedTextView.getText().toString();
-                            int startIndex = userSentence.lastIndexOf(clickedText);
-                            if (startIndex != -1) {
-                                userSentence.delete(startIndex, startIndex + clickedText.length());
-                            }
-                            checkOptionSelection();
-                        } else {
-                            parentLayout.removeView(clickedTextView);
-                            line1.addView(clickedTextView);
-                            userSentence.append(clickedTextView.getText()).append(" ");
-                            checkOptionSelection();
-                        }
-                    }
+                    moveOption(optionTextView);
                 }
             });
         }
+    }
 
-        findViewById(R.id.submit_button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkUserSentence();
+    private void setQuestion(int index) {
+        ImageView gambarCard = findViewById(R.id.gambarCard);
+        gambarCard.setImageResource(imageResources[index]);
+
+        LinearLayout allOptionLayout = findViewById(R.id.all_option);
+        allOptionLayout.removeAllViews();
+
+        for (int i = 0; i < optionTextViews.length; i++) {
+            TextView optionTextView = optionTextViews[i];
+            ViewGroup parent = (ViewGroup) optionTextView.getParent();
+            if (parent != null) {
+                parent.removeView(optionTextView);
             }
-        });
+            optionTextView.setText(options[index][i]);
+            allOptionLayout.addView(optionTextView);
+        }
+
+        line1.removeAllViews();
+        userSentence.setLength(0);
+
+        submitButton.setEnabled(false);
+    }
+
+    private void moveOption(TextView optionTextView) {
+        LinearLayout parentLayout = (LinearLayout) optionTextView.getParent();
+        if (parentLayout != null) {
+            if (parentLayout.getId() == R.id.line1) {
+                parentLayout.removeView(optionTextView);
+                LinearLayout allOptionLayout = findViewById(R.id.all_option);
+                allOptionLayout.addView(optionTextView);
+                String clickedText = optionTextView.getText().toString();
+                int startIndex = userSentence.lastIndexOf(clickedText);
+                if (startIndex != -1) {
+                    userSentence.delete(startIndex, startIndex + clickedText.length());
+                }
+            } else {
+                parentLayout.removeView(optionTextView);
+                line1.addView(optionTextView);
+                userSentence.append(optionTextView.getText()).append(" ");
+            }
+        }
+        checkOptionSelection();
     }
 
     private void checkOptionSelection() {
@@ -100,17 +132,34 @@ public class SentencePuzzleActivity extends AppCompatActivity {
             }
         }
         submitButton.setEnabled(allOptionsSelected);
-        submitButton.setClickable(allOptionsSelected);
     }
 
     private void checkUserSentence() {
         String userSentenceStr = userSentence.toString().trim();
-        String correctSentence = "The cat is sleeping";
+        String correctSentence = correctSentences[questionIndex];
 
         if (userSentenceStr.equalsIgnoreCase(correctSentence)) {
             Toast.makeText(SentencePuzzleActivity.this, "Correct sentence!", Toast.LENGTH_SHORT).show();
+            if (questionIndex < options.length - 1) {
+                questionIndex++;
+                setQuestion(questionIndex);
+            } else {
+                Intent intent = new Intent(SentencePuzzleActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
         } else {
-            Toast.makeText(SentencePuzzleActivity.this, "Incorrect sentence. Nice try!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SentencePuzzleActivity.this, "Incorrect sentence. Try again!", Toast.LENGTH_SHORT).show();
+            LinearLayout allOptionLayout = findViewById(R.id.all_option);
+            for (TextView optionTextView : optionTextViews) {
+                ViewGroup parent = (ViewGroup) optionTextView.getParent();
+                if (parent != null) {
+                    parent.removeView(optionTextView);
+                }
+                allOptionLayout.addView(optionTextView);
+            }
+            line1.removeAllViews();
+            userSentence.setLength(0);
+            submitButton.setEnabled(false);
         }
-    }
-}
+    }}
