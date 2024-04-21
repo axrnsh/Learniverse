@@ -27,7 +27,7 @@ public class ReadStoryEndActivity extends AppCompatActivity {
         buttonClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ReadStoryEndActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ReadStoryEndActivity.this, StoryTaleActivity.class);
                 startActivity(intent);
             }
         });
