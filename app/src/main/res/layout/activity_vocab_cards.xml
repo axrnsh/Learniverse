@@ -20,27 +20,35 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="12dp" >
+            android:layout_gravity="center">
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="198dp"
-                android:layout_height="28dp"
+                android:layout_width="20dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="88dp"
-                android:layout_weight="1"
-                android:src="@drawable/icon_back_button"/>
+                android:src="@drawable/icon_back_button" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/txtVocabCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="106dp"
                 android:layout_gravity="center"
                 android:text="Vocab Card"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <!-- kenapa 20? karena back buttonnya 20dp-->
         </LinearLayout>
 
         <LinearLayout
@@ -53,7 +61,7 @@
                 android:layout_width="225dp"
                 android:layout_height="225dp"
                 android:layout_marginTop="66dp"
-                android:src="@drawable/sleeping_cat"
+                android:src="@drawable/card_apple"
                 android:layout_gravity="center"
                 />
 
@@ -65,7 +73,7 @@
                 android:layout_marginTop="32dp"
                 android:text="APPLE"
                 android:textAlignment="center"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/logo_dark_green" />
 
@@ -81,20 +89,22 @@
 
             <ImageButton
                 android:id="@+id/sound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="28dp"
-                android:src="@android:drawable/btn_star" />
+                android:contentDescription="apple"
+                android:src="@drawable/vocab_sound"
+                android:background="@color/white"/>
 
             <TextView
-                android:id="@+id/txtSlide"
+                android:id="@+id/txtTap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="85dp"
-                android:text="Slide to next!"
-                android:textColor="@color/grey"
+                android:text="Tap here to next!"
+                android:textColor="@color/dark_grey"
                 android:textAlignment="center" />
         </LinearLayout>
 

@@ -18,6 +18,11 @@ public class VocabCardsActivity extends AppCompatActivity {
     ImageView soundButton;
     TextToSpeech textToSpeech;
 
+    private int currentCardIndex = 0;
+    private int[] cardImages = {R.drawable.card_apple, R.drawable.card_apple, R.drawable.card_apple, R.drawable.card_apple, R.drawable.card_apple};
+    private String[] cardNames = {"APPLE", "TOOTHBRUSH", "SOCKS", "SKY", "PEN"};
+    private String[] cardDescriptions = {"A fruit with red bright color", "The tool to brush our teeth", "Something we wear on our feet", "The color of the sky", "The tool we use to write on paper"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,26 @@ public class VocabCardsActivity extends AppCompatActivity {
                 String word = namaCardTextView.getText().toString();
 
                 textToSpeech.speak(word, TextToSpeech.QUEUE_FLUSH, null, null);
+            }
+        });
+
+        TextView txtTap = findViewById(R.id.txtTap);
+        txtTap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentCardIndex++;
+
+                if (currentCardIndex >= cardImages.length) {
+                    currentCardIndex = 0;
+                }
+
+                ImageView gambarCardImageView = findViewById(R.id.gambarCard);
+                TextView namaCardTextView = findViewById(R.id.namaCard);
+                TextView descCardTextView = findViewById(R.id.descCard);
+
+                gambarCardImageView.setImageResource(cardImages[currentCardIndex]);
+                namaCardTextView.setText(cardNames[currentCardIndex]);
+                descCardTextView.setText(cardDescriptions[currentCardIndex]);
             }
         });
     }
