@@ -85,25 +85,6 @@ public class fragmentEducation extends Fragment {
         return view;
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        // Close the Realm instance when the fragment is destroyed
-        if (realm != null) {
-            realm.close();
-        }
-    }
-
-    // Method to clear all stories from Realm
-    private void clearAllStory() {
-        realm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                realm.deleteAll();
-            }
-        });
-    }
-
     // Method to save a new story to Realm
     private void simpanDataStoryEducation(final String namaStory, final String descStory, final int gambarStory) {
         realm.executeTransaction(new Realm.Transaction() {
@@ -121,5 +102,24 @@ public class fragmentEducation extends Fragment {
     private ArrayList<Story> getAllStory() {
         RealmResults<Story> stories = realm.where(Story.class).findAll();
         return new ArrayList<>(stories);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // Close the Realm instance when the fragment is destroyed
+        if (realm != null) {
+            realm.close();
+        }
+    }
+
+    // Method to clear all stories from Realm
+    private void clearAllStory() {
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                realm.deleteAll();
+            }
+        });
     }
 }
