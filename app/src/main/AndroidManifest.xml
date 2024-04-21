@@ -34,13 +34,13 @@
             android:name=".StoryTaleActivity"
             android:exported="false" />
         <activity
-            android:name=".GuessingGameActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".GuessingGameScoreActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".GuessingGameActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

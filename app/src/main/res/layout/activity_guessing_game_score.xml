@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GuessingGameScoreActivity"
-    android:background="@drawable/ref_guessing_game_score">
+    tools:context=".GuessingGameScoreActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,29 +20,19 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
+            android:gravity="center"
             android:layout_marginBottom="12dp" >
-
-            <ImageView
-                android:id="@+id/backButton"
-                android:layout_width="198dp"
-                android:layout_height="28dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="120dp"
-                android:layout_weight="1"
-                android:src="@drawable/icon_back_button"/>
 
             <TextView
                 android:id="@+id/txtResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="140dp"
                 android:layout_gravity="center"
                 android:text="Result"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,7 +44,8 @@
                 android:layout_height="155dp"
                 android:orientation="vertical"
                 android:layout_marginTop="65dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_square_fill">
 
                 <LinearLayout
                     android:layout_width="116dp"
@@ -81,37 +71,96 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center">
                     <TextView
-                        android:id="@+id/txtScore"
+                        android:id="@+id/score"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:textAlignment="center"
-                        android:text="100"
                         android:textStyle="bold"
                         android:textSize="80dp"
                         android:textColor="@color/white"  />
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp">
                 <LinearLayout
-                    android:layout_width="230dp"
+                    android:layout_width="110dp"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_marginTop="14dp">
+                    android:background="@drawable/rounded_border">
+
+                    <ImageView
+                        android:src="@drawable/icon_correct"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent">
+                    </ImageView>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:background="@drawable/rounded_border">
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/correctCounter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="7dp"
+                            android:textSize="28dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/logo_dark_green">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rounded_border">
 
-                        <ImageView
-                            android:src="@drawable/icon_correct"
-                            android:layout_width="110dp"
-                            android:layout_height="20dp">
-
-                        </ImageView>
-
+                    <ImageView
+                        android:src="@drawable/icon_wrong"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent">
+                    </ImageView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        <TextView
+                            android:id="@+id/wrongCounter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="7dp"
+                            android:textSize="28dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/logo_dark_green">
+                        </TextView>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="155dp"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/resultImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center">
+                </ImageView>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/buttonReturnHome"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/button_return_home_colored"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+            </ImageView>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

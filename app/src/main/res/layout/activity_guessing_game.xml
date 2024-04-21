@@ -27,7 +27,7 @@
                 android:layout_width="198dp"
                 android:layout_height="28dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="59dp"
+                android:layout_marginRight="85dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_back_button"/>
 
@@ -35,9 +35,9 @@
                 android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="78dp"
+                android:layout_marginRight="110dp"
                 android:layout_gravity="center"
-                android:text="Guessing Game"
+                android:text="Quiz Game"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
