@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="88dp"
                 android:layout_gravity="center"
-                android:text="Story Reading"
+                android:text="Harry Potter"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
@@ -47,11 +47,13 @@
             android:layout_height="match_parent"
             android:paddingTop="75dp"
             android:orientation="vertical" >
+
             <ImageView
                 android:layout_width="290dp"
                 android:layout_height="180dp"
-                android:layout_gravity="center">
-            </ImageView>
+                android:layout_gravity="center"
+                android:src="@drawable/bukuillus_harpot1"></ImageView>
+
             <TextView
                 android:id="@+id/storyParagraph"
                 android:layout_marginTop="40dp"
@@ -59,7 +61,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:paddingTop="4dp"
-                android:text="hai"
+                android:text="          Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. "
                 android:textSize="18dp">
 
             </TextView>
