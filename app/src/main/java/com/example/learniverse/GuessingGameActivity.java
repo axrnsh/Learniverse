@@ -75,6 +75,7 @@ public class GuessingGameActivity extends AppCompatActivity {
                             setQuestionScreen(currentQuestions);
                             answer1.setBackgroundResource(R.color.white);
                             answer1.setTextColor(getResources().getColor(R.color.logo_dark_green));
+                            answer1.setBackgroundResource(R.drawable.rounded_dotted_border);
                         }
                     }, 500);
                 }else {
@@ -109,6 +110,7 @@ public class GuessingGameActivity extends AppCompatActivity {
                             setQuestionScreen(currentQuestions);
                             answer2.setBackgroundResource(R.color.white);
                             answer2.setTextColor(getResources().getColor(R.color.logo_dark_green));
+                            answer2.setBackgroundResource(R.drawable.rounded_dotted_border);
                         }
                     }, 500);
                 }else {
@@ -143,6 +145,7 @@ public class GuessingGameActivity extends AppCompatActivity {
                             setQuestionScreen(currentQuestions);
                             answer3.setBackgroundResource(R.color.white);
                             answer3.setTextColor(getResources().getColor(R.color.logo_dark_green));
+                            answer3.setBackgroundResource(R.drawable.rounded_dotted_border);
                         }
                     }, 500);
                 }else {
@@ -160,8 +163,11 @@ public class GuessingGameActivity extends AppCompatActivity {
         questionCounter.setText(guessingQuestionsList.get(currentQuestions).getQuestionCounter());
         question.setText(guessingQuestionsList.get(currentQuestions).getQuestion());
         answer1.setText(guessingQuestionsList.get(currentQuestions).getAnswer1());
+        answer1.setBackgroundResource(R.drawable.rounded_dotted_border);
         answer2.setText(guessingQuestionsList.get(currentQuestions).getAnswer2());
+        answer2.setBackgroundResource(R.drawable.rounded_dotted_border);
         answer3.setText(guessingQuestionsList.get(currentQuestions).getAnswer3());
+        answer3.setBackgroundResource(R.drawable.rounded_dotted_border);
     }
 
     private void loadAllQuestion() {

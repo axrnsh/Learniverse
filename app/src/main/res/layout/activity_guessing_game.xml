@@ -20,27 +20,35 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="12dp" >
+            android:layout_gravity="center">
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="198dp"
-                android:layout_height="28dp"
+                android:layout_width="20dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="85dp"
-                android:layout_weight="1"
-                android:src="@drawable/icon_back_button"/>
+                android:src="@drawable/icon_back_button" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="110dp"
                 android:layout_gravity="center"
                 android:text="Quiz Game"
                 android:textColor="@color/logo_dark_green"
                 android:textStyle="bold"
                 android:textSize="30dp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <!-- kenapa 20? karena back buttonnya 20dp-->
         </LinearLayout>
 
         <LinearLayout
@@ -124,14 +132,6 @@
                     android:textSize="15dp"
                     android:textColor="@color/logo_dark_green" />
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/nextButton"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/button_next_gnw"/>
 
         </LinearLayout>
 

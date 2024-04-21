@@ -35,11 +35,11 @@ public class GuessingGameScoreActivity extends AppCompatActivity {
         resultScore.setText("" + score);
 
         if (correct >= 0 && correct <= 2) {
-            resultImage.setImageResource(R.drawable.gambar_anggur);
+            resultImage.setImageResource(R.drawable.sentence_sleeping_cat);
         }else if (correct >= 3 && correct <= 4) {
-            resultImage.setImageResource(R.drawable.gambar_buku);
+            resultImage.setImageResource(R.drawable.sentence_giraffe);
         }else if (correct == 5) {
-            resultImage.setImageResource(R.drawable.gambar_jeruk);
+            resultImage.setImageResource(R.drawable.sentence_piano);
         }else{
             getRequestedOrientation();
         }

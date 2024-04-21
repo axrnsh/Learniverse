@@ -107,7 +107,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="5pt"
                                 android:layout_marginBottom="5pt"
-                                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                android:text="Explore fun stories to read and imagine more"
                                 android:textAlignment="center"
                                 android:textSize="5pt" />
 
@@ -165,7 +165,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="5pt"
                                 android:layout_marginBottom="5pt"
-                                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                android:text="Learn new words with colorful pictures"
                                 android:textAlignment="center"
                                 android:textSize="5pt" />
 
@@ -245,7 +245,7 @@
                             android:layout_marginHorizontal="5pt"
                             android:textAlignment="center"
                             android:layout_marginBottom="5pt"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            android:text="Solve puzzles to understand sentences better" />
 
                         <Button
                             android:id="@+id/startAlphabet"
@@ -302,7 +302,7 @@
                             android:layout_marginHorizontal="5pt"
                             android:textAlignment="center"
                             android:layout_marginBottom="5pt"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                            android:text="Play quiz game to see how much you've learned" />
 
                         <Button
                             android:id="@+id/startGuessingGame"
