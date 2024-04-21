@@ -81,15 +81,8 @@
                             android:layout_width="75pt"
                             android:layout_height="100pt"
                             android:background="@drawable/rounded_border"
-                            android:orientation="vertical" >
-
-                            <TextView
-                                android:id="@+id/LvStory"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5pt"
-                                android:text=""
-                                android:textAlignment="center" />
+                            android:orientation="vertical"
+                            android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/StoryIllus"
@@ -138,22 +131,16 @@
                         android:layout_marginLeft="3pt"
                         android:layout_marginRight="5pt"
                         android:layout_marginVertical="5pt"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        >
 
                         <LinearLayout
                             android:id="@+id/boxVC"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:background="@drawable/rounded_border"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/LvVocab"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5pt"
-                                android:text=""
-                                android:textAlignment="center" />
+                            android:orientation="vertical"
+                            android:gravity="center" >
 
                             <ImageView
                                 android:id="@+id/imageView4"
@@ -228,17 +215,10 @@
                     <LinearLayout
                         android:id="@+id/boxSP"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="@drawable/rounded_border"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/LvAlphabet"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5pt"
-                            android:textAlignment="center"
-                            android:text="" />
+                        android:orientation="vertical"
+                        android:gravity="center">
 
                         <ImageView
                             android:id="@+id/imageView5"
@@ -292,17 +272,10 @@
                     <LinearLayout
                         android:id="@+id/boxET"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="@drawable/rounded_border"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/LvEvaluation"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5pt"
-                            android:textAlignment="center"
-                            android:text="Level 00" />
+                        android:orientation="vertical"
+                        android:gravity="center">
 
                         <ImageView
                             android:id="@+id/imageView6"

@@ -11,22 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:layout_marginRight="22dp"
-        android:layout_marginLeft="22dp" >
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="22dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="17dp" >
+            android:layout_marginBottom="12dp" >
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="197dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="28dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="70dp"
+                android:layout_marginRight="88dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_back_button"/>
 
@@ -34,27 +36,26 @@
                 android:id="@+id/txtStoryReading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="90dp"
+                android:layout_marginRight="106dp"
                 android:layout_gravity="center"
                 android:text="Story Reading"
-                android:textColor="@color/black"
-                android:textSize="28dp"
-                android:textFontWeight="100000"
-                android:fontFamily="@font/inter"/>
+                android:textColor="@color/logo_dark_green"
+                android:textStyle="bold"
+                android:textSize="30dp" />
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputSearchTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="362dp"
-                android:layout_height="33dp"
+                android:layout_height="34dp"
                 android:layout_gravity="center"
                 android:ems="5"
                 android:textSize="12dp"
-                android:fontFamily="@font/inter"
                 android:hint="Search Title..." />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,7 +77,6 @@
                     android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/inter"
                     android:text="Fantasy" />
             </LinearLayout>
 
@@ -93,7 +93,6 @@
                     android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/inter"
                     android:text="Mystery" />
             </LinearLayout>
 
@@ -110,7 +109,6 @@
                     android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/inter"
                     android:text="Poetry" />
             </LinearLayout>
 
@@ -127,7 +125,6 @@
                     android:textSize="16dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/inter"
                     android:text="Education" />
             </LinearLayout>
         </LinearLayout>

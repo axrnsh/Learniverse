@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VocabCardsActivity"
-    android:background="@drawable/ref_vocab_card">
+    tools:context=".VocabCardsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,28 +20,27 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="17dp" >
+            android:layout_marginBottom="12dp" >
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="197dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="88dp"
                 android:layout_weight="1"
                 android:src="@drawable/icon_back_button"/>
 
             <TextView
-                android:id="@+id/txtStoryReading"
+                android:id="@+id/txtVocabCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="106dp"
                 android:layout_gravity="center"
                 android:text="Vocab Card"
-                android:textColor="@color/black"
-                android:textSize="28dp"
-                android:textFontWeight="100000"
-                android:fontFamily="@font/inter"/>
+                android:textColor="@color/logo_dark_green"
+                android:textStyle="bold"
+                android:textSize="30dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -54,7 +52,7 @@
                 android:id="@+id/gambarCard"
                 android:layout_width="225dp"
                 android:layout_height="225dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="66dp"
                 android:src="@drawable/sleeping_cat"
                 android:layout_gravity="center"
                 />
@@ -69,17 +67,16 @@
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:textColor="@color/logo_dark_green"
-                android:fontFamily="@font/inter"
-                android:textFontWeight="100000"/>
+                android:textColor="@color/logo_dark_green" />
 
             <TextView
                 android:id="@+id/descCard"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="8dp"
                 android:text="A fruit with red bright color"
+                android:textColor="@color/green"
                 android:textAlignment="center" />
 
             <ImageButton
@@ -97,6 +94,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="85dp"
                 android:text="Slide to next!"
+                android:textColor="@color/grey"
                 android:textAlignment="center" />
         </LinearLayout>
 

@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.learniverse.Model.User;
 
@@ -17,7 +17,7 @@ import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
 public class UserFormActivity extends AppCompatActivity {
     EditText editUsername, editPassword;
-    Button buttonGo;
+    ImageView buttonSignIn;
     Long idUser;
     String username="";
     String password="";
@@ -28,9 +28,9 @@ public class UserFormActivity extends AppCompatActivity {
 
         editUsername = (EditText) findViewById(R.id.editUsername);
         editPassword = (EditText) findViewById(R.id.editPassword);
-        buttonGo = (Button) findViewById(R.id.buttonGo);
+        buttonSignIn = (ImageView) findViewById(R.id.buttonSignIn);
 
-        buttonGo.setOnClickListener(new View.OnClickListener() {
+        buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 username = editUsername.getText().toString();

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserFormActivity"
-    android:background="@drawable/ref_login_page">
+    tools:context=".UserFormActivity">
 
 
     <LinearLayout
@@ -15,52 +14,77 @@
         android:layout_marginTop="22dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center">
+        android:layout_marginBottom="50dp">
 
         <ImageView
             android:id="@+id/logoLearniverse"
             android:layout_width="180dp"
             android:layout_height="180dp"
+            android:layout_gravity="center"
             android:src="@drawable/logo_learniverse_verti"
+            android:layout_marginTop="54dp"
             android:layout_marginBottom="40dp"/>
 
-        <TextView
-            android:id="@+id/txtUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Username" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="285dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/rounded_border_button" >
+ >
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:text="Username"
+                android:textSize="12dp" />
 
-        <EditText
-            android:id="@+id/editUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:text="learnie99"
-            android:layout_marginBottom="20dp"/>
+            <EditText
+                android:id="@+id/editUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:text="learnie99"
+                android:textSize="15dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="285dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/rounded_border_button">
+            <TextView
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:text="Password"
+                android:textSize="12dp" />
 
-        <EditText
-            android:id="@+id/editPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Password"
-            android:layout_marginBottom="40dp"/>
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="15dp" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonGo"
+
+        <ImageView
+            android:id="@+id/buttonSignIn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/green"
-            android:text="SIGN IN" />
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/button_sign_in_colored"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
