@@ -133,14 +133,6 @@
                     android:textColor="@color/logo_dark_green" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/nextButton"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/button_next_gnw"/>
-
         </LinearLayout>
 
     </LinearLayout>
