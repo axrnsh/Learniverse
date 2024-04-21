@@ -92,6 +92,7 @@ public class fragmentFantasy extends Fragment {
                 story.setNamaStory(namaStory);
                 story.setDescStory(descStory);
                 story.setGambarStory(gambarStory);
+                story.setCategory("Fantasy");
             }
         });
     }
