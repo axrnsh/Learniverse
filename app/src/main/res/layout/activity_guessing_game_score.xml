@@ -21,67 +21,97 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:layout_marginBottom="17dp" >
+            android:layout_marginBottom="12dp" >
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="198dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="120dp"
+                android:layout_weight="1"
+                android:src="@drawable/icon_back_button"/>
 
             <TextView
-                android:id="@+id/txtStoryReading"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/txtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="140dp"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:fontFamily="@font/inter"
                 android:text="Result"
-                android:textColor="@color/black"
-                android:textFontWeight="100000"
-                android:textSize="28dp" />
+                android:textColor="@color/logo_dark_green"
+                android:textStyle="bold"
+                android:textSize="30dp" />
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="155dp"
+                android:orientation="vertical"
+                android:layout_marginTop="65dp"
+                android:layout_gravity="center">
 
-            <TextView
-                android:id="@+id/namaCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="32dp"
-                android:text="APPLE"
-                android:textAlignment="center"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/logo_dark_green"
-                android:fontFamily="@font/inter"
-                android:textFontWeight="100000"/>
+                <LinearLayout
+                    android:layout_width="116dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/rounded_elips_border" >
+                    <TextView
+                        android:id="@+id/txtYourScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:paddingTop="6dp"
+                        android:text="Your Score"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"  />
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/descCard"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="6dp"
-                android:text="A fruit with red bright color"
-                android:textAlignment="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/txtScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="100"
+                        android:textStyle="bold"
+                        android:textSize="80dp"
+                        android:textColor="@color/white"  />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="14dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/rounded_border">
 
-            <ImageButton
-                android:id="@+id/sound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="28dp"
-                android:src="@android:drawable/btn_star" />
+                        <ImageView
+                            android:src="@drawable/icon_correct"
+                            android:layout_width="110dp"
+                            android:layout_height="20dp">
 
-            <TextView
-                android:id="@+id/txtSlide"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="85dp"
-                android:text="Slide to next!"
-                android:textAlignment="center" />
+                        </ImageView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
