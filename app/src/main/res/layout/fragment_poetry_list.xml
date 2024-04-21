@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="com.example.learniverse.FragmentEducation"
+    android:name="com.example.learniverse.FragmentPoetry"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".fragmentEducation"
-    tools:listitem="@layout/fragment_education" />
+    tools:context=".fragmentPoetry"
+    tools:listitem="@layout/fragment_poetry" />
