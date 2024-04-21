@@ -56,9 +56,6 @@ public class fragmentFantasy extends Fragment {
         // Open the Realm instance
         realm = Realm.getDefaultInstance();
 
-        // Clear all existing stories (optional)
-        clearAllStory();
-
         // Initialize data (optional)
         simpanDataStoryFantasy("Harry Potter and the Sorcerer's Stone", "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright.", R.drawable.buku_harrypotter);
         simpanDataStoryFantasy("The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", "our adventurous siblings—Peter, Susan, Edmund, and Lucy Pevensie—step through a wardrobe door and into the land of Narnia, a land frozen in eternal winter and enslaved by the power of the White Witch. But when almost all hope is lost, the return of the Great Lion, Aslan, signals a great change . . . and a great sacrifice.", R.drawable.buku_narnia);
