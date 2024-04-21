@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="22dp">
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="22dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="50dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:src="@drawable/icon_back_button" />
 
@@ -37,15 +40,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Sentence Puzzle"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textColor="@color/logo_dark_green"
+                android:textStyle="bold"
+                android:textSize="30dp" />
 
             <View
-                android:layout_width="50dp"
+                android:layout_width="20dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-            <!-- kenapa 50? karena back buttonnya 50dp-->
+            <!-- kenapa 20? karena back buttonnya 20dp-->
         </LinearLayout>
 
         <LinearLayout
@@ -88,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
