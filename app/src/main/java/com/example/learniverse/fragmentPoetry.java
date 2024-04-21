@@ -60,7 +60,8 @@ public class fragmentPoetry extends Fragment {
         clearAllStory();
 
         // Initialize data (optional)
-        simpanDataStoryPoetry("Story Title", "Story desc...", R.drawable.gambar1);
+        simpanDataStoryPoetry("Where the Sidewalk Ends", "You'll meet a boy who turns into a TV set, and a girl who eats a whale. The Unicorn and the Bloath live there, and so does Sarah Cynthia Sylvia Stout who will not take the garbage out. It is a place where you wash your shadow and plant diamond gardens, a place where shoes fly, sisters are auctioned off, and crocodiles go to the dentist.", R.drawable.buku_wherethesidewalkends);
+        simpanDataStoryPoetry("A Light in the Attic", "Here in the attic you will find Backward Bill, Sour Face Ann, the Meehoo with an Exactlywatt, and the Polar Bear in the Frigidaire. You will talk with Broiled Face, and find out what happens when Somebody steals your knees, you get caught by the Quick-Digesting Gink, a Mountain snores, and They Put a Brassiere on the Camel.", R.drawable.buku_alightintheattic);
     }
 
     @Override
