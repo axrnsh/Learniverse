@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReadStoryEndActivity"
-    android:background="@drawable/ref_story_reading_book1_page1">
+    tools:context=".ReadStoryEndActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
