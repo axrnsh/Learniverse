@@ -1,6 +1,7 @@
 package com.example.learniverse;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -83,6 +84,13 @@ public class fragmentEducation extends Fragment {
             // Load stories from Realm and pass them to the adapter
             ArrayList<Story> stories = getAllEducationStories();
             recyclerView.setAdapter(new VPStoryAdapter(stories));
+            recyclerView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), ReadStoryActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
         return view;
     }
