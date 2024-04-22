@@ -29,8 +29,8 @@ public class fragmentPoetry extends Fragment {
     }
 
     @SuppressWarnings("unused")
-    public static fragmentEducation newInstance(int columnCount) {
-        fragmentEducation fragment = new fragmentEducation();
+    public static fragmentPoetry newInstance(int columnCount) {
+        fragmentPoetry fragment = new fragmentPoetry();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
