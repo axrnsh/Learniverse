@@ -93,14 +93,14 @@ public class fragmentEducation extends Fragment {
                 story.setNamaStory(namaStory);
                 story.setDescStory(descStory);
                 story.setGambarStory(gambarStory);
-                story.setCategory("Education");
+                story.setNamaKategori("Education");
             }
         });
     }
     // Method to retrieve all stories from Realm
     private ArrayList<Story> getAllEducationStories() {
         RealmResults<Story> stories = realm.where(Story.class)
-                .equalTo("category", "Education") // Assuming you have a 'category' field in your Story class
+                .equalTo("namaKategori", "Education")
                 .findAll();
         return new ArrayList<>(stories);
     }

@@ -92,7 +92,7 @@ public class fragmentFantasy extends Fragment {
                 story.setNamaStory(namaStory);
                 story.setDescStory(descStory);
                 story.setGambarStory(gambarStory);
-                story.setCategory("Fantasy");
+                story.setNamaKategori("Fantasy");
             }
         });
     }
@@ -100,7 +100,7 @@ public class fragmentFantasy extends Fragment {
     // Method to retrieve all stories from Realm
     private ArrayList<Story> getAllFantasyStories() {
         RealmResults<Story> stories = realm.where(Story.class)
-                .equalTo("category", "Fantasy") // Assuming you have a 'category' field in your Story class
+                .equalTo("namaKategori", "Fantasy") // Assuming you have a 'category' field in your Story class
                 .findAll();
         return new ArrayList<>(stories);
     }
