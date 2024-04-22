@@ -73,7 +73,7 @@
                 android:id="@+id/editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:text="password"
                 android:textSize="15dp" />
         </LinearLayout>
