@@ -19,7 +19,7 @@ public class ReadStoryActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ReadStoryActivity.this, ReadStoryEndActivity.class);
+                Intent intent = new Intent(ReadStoryActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +27,7 @@ public class ReadStoryActivity extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ReadStoryActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ReadStoryActivity.this, ReadStoryEndActivity.class);
                 startActivity(intent);
             }
         });
