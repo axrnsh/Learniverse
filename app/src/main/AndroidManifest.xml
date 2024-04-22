@@ -22,13 +22,13 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".UserFormActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".VocabCardsActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".GuessingGameActivity"
             android:exported="false" />
         <activity
             android:name=".SentencePuzzleActivity"
@@ -46,7 +46,7 @@
             android:name=".GuessingGameScoreActivity"
             android:exported="false" />
         <activity
-            android:name=".GuessingGameActivity"
+            android:name=".UserFormActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

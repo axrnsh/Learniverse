@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import com.example.learniverse.Model.User;
 
 import io.realm.Realm;
-import io.realm.RealmObject;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
 public class UserFormActivity extends AppCompatActivity {
@@ -25,6 +24,8 @@ public class UserFormActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_form);
+
+        Realm.init(this);
 
         editUsername = (EditText) findViewById(R.id.editUsername);
         editPassword = (EditText) findViewById(R.id.editPassword);
@@ -44,8 +45,8 @@ public class UserFormActivity extends AppCompatActivity {
 
     public void tambahDataUser(String username, String password) {
         Realm realm = Realm.getDefaultInstance();
-        //penyimpanan data
-        realm.executeTransaction(new Realm.Transaction() {
+        // penyimpanan data
+        realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 try {
@@ -56,7 +57,17 @@ public class UserFormActivity extends AppCompatActivity {
                     Log.d("TAG", "Account already exist " + e.getMessage().toString());
                 }
             }
+        }, new Realm.Transaction.OnSuccess() {
+            @Override
+            public void onSuccess() {
+                realm.close();
+            }
+        }, new Realm.Transaction.OnError() {
+            @Override
+            public void onError(Throwable error) {
+                Log.e("TAG", "Error saving user: " + error.getMessage());
+                realm.close();
+            }
         });
-        realm.close();
     }
 }
