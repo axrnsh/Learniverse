@@ -56,6 +56,9 @@ public class fragmentEducation extends Fragment {
         // Open the Realm instance
         realm = Realm.getDefaultInstance();
 
+        // Clear existing data (optional)
+        clearAllStory();
+
         // Initialize data (optional)
         simpanDataStoryEducation("Rosie Reverie, Engineer", "Rosie dreams of becoming a great engineer, and her room becomes a secret workshop where she constructs ingenious inventions from odds and ends. From hot dog dispensers to helium pants and python-repelling cheese hats, Rosie's creations would astound anyone—if only she'd let them see.", R.drawable.buku_rosiereverie);
         simpanDataStoryEducation("The Magic School Bus Explores the Senses", "On a most sense-sational trip that takes them through an eye, an ear, a tongue, and even a dog's nose, Ms. Frizzle's class learns about the senses. Using their trademark sense of humor, Joanna Cole and Bruce Degen provide facts about the senses in both the human and animal worlds.", R.drawable.buku_magicschoolbus);
