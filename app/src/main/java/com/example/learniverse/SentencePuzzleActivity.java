@@ -144,7 +144,7 @@ public class SentencePuzzleActivity extends AppCompatActivity {
                 questionIndex++;
                 setQuestion(questionIndex);
             } else {
-                Intent intent = new Intent(SentencePuzzleActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SentencePuzzleActivity.this, SentencePuzzleReview.class);
                 startActivity(intent);
                 finish();
             }
