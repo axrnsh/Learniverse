@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile">
+    tools:context=".ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 android:textColor="@color/logo_dark_green"/>
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/btnLogOut"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

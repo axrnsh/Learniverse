@@ -19,7 +19,7 @@
             android:name=".sentence_puzzle_review"
             android:exported="false" />
         <activity
-            android:name=".profile"
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".ReadStoryEndActivity"
@@ -31,7 +31,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".UserFormActivity"
             android:exported="false" />
         <activity
             android:name=".VocabCardsActivity"
@@ -52,7 +52,7 @@
             android:name=".GuessingGameScoreActivity"
             android:exported="false" />
         <activity
-            android:name=".UserFormActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
