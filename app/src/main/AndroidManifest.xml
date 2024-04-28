@@ -16,9 +16,6 @@
             android:name=".SentencePuzzleReview"
             android:exported="false" />
         <activity
-            android:name=".sentence_puzzle_review"
-            android:exported="false" />
-        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
