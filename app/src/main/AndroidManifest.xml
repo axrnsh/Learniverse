@@ -28,10 +28,10 @@
             android:name=".ReadStoryActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".UserFormActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".VocabCardsActivity"
@@ -52,7 +52,7 @@
             android:name=".GuessingGameScoreActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".UserFormActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
