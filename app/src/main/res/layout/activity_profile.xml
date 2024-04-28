@@ -82,7 +82,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="160dp"
-                android:src="@drawable/Button_Log_Out_Colored" />
+                android:src="@drawable/button_logout_colored" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
