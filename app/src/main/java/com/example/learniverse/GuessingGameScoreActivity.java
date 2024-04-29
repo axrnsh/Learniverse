@@ -38,6 +38,7 @@ public class GuessingGameScoreActivity extends AppCompatActivity {
             resultImage.setImageResource(R.drawable.owl_sad);
         }else if (correct >= 3 && correct <= 4) {
             resultImage.setImageResource(R.drawable.owl_happy);
+        }else if (correct == 5) {
             resultImage.setImageResource(R.drawable.owl_amaze);
         }else{
             getRequestedOrientation();
